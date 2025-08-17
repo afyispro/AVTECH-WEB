@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AVTECH</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f2027;
+      color: white;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 20px 50px;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+    }
+
+    header h1 {
+      font-size: 1.5rem;
+      margin: 0;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff416c;
+    }
+
+    section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 80px 50px;
+    }
+
+    #home {
+      background: url("https://images.unsplash.com/photo-1529101091764-c3526daf38fe?auto=format&fit=crop&w=1350&q=80") no-repeat center/cover;
+      position: relative;
+    }
+
+    #home::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+    }
+
+    #home * {
+      position: relative;
+      z-index: 1;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      animation: fadeInUp 1s ease;
+    }
+
+    p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      line-height: 1.8;
+      animation: fadeInUp 1.5s ease;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #ff416c;
+      color: white;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .btn:hover {
+      background: #ff4b2b;
+      transform: scale(1.05);
+    }
+
+    /* Services Cards */
+    .services-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 30px;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      background: rgba(255,255,255,0.1);
+    }
+
+    .card h3 {
+      margin-bottom: 15px;
+      color: #ff416c;
+    }
+
+    /* Contact Form */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      max-width: 400px;
+      margin-top: 20px;
+    }
+
+    input, textarea {
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 1rem;
+    }
+
+    input[type="submit"] {
+      background: #ff416c;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    input[type="submit"]:hover {
+      background: #ff4b2b;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    footer .socials {
+      margin: 10px 0;
+    }
+
+    footer .socials a {
+      margin: 0 10px;
+      color: #ff416c;
+      font-size: 1.3rem;
+      transition: 0.3s;
+    }
+
+    footer .socials a:hover {
+      color: white;
+    }
+
+    /* Scroll to top button */
+    #topBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #ff416c;
+      border: none;
+      padding: 12px 15px;
+      border-radius: 50%;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      display: none;
+      transition: 0.3s;
+      z-index: 999;
+    }
+
+    #topBtn:hover {
+      background: #ff4b2b;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {opacity:0; transform: translateY(20px);}
+      to {opacity:1; transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🚀 AVTECH</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Welcome to AVTECH</h2>
+    <p>Innovation • Technology • Future</p>
+    <a href="#about" class="btn">Learn More</a>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>AVTECH is a forward-thinking technology company focusing on innovation and creating future-ready solutions. Our mission is to connect people with technology that improves everyday life.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services-container">
+      <div class="card">
+        <h3>💻 Software Development</h3>
+        <p>Building scalable and efficient software tailored for your business needs.</p>
+      </div>
+      <div class="card">
+        <h3>🔧 Hardware Integration</h3>
+        <p>Seamless integration of hardware and software to create powerful systems.</p>
+      </div>
+      <div class="card">
+        <h3>☁️ Cloud Solutions</h3>
+        <p>Secure and fast cloud infrastructure to support your business growth.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Got a project in mind? Let’s build it together!</p>
+    <form action="mailto:contact@avtech.com" method="post" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <input type="submit" value="Send">
+    </form>
+  </section>
+
+  <footer>
+    <div class="socials">
+      <a href="#">🌐</a>
+      <a href="#">🐦</a>
+      <a href="#">📘</a>
+      <a href="#">📸</a>
+    </div>
+    © 2025 AVTECH. All rights reserved.
+  </footer>
+
+  <button id="topBtn">↑</button>
+
+  <script>
+    // Scroll to top button
+    const topBtn = document.getElementById("topBtn");
+    window.onscroll = function() {
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
+    };
+    topBtn.onclick = function() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    };
+  </script>
+</body>
+</html>
